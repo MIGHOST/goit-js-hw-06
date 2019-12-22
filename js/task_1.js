@@ -15,7 +15,7 @@ console.log(getUsersWithEyeColor(users, 'blue'));
 
 
 //Task-3
-const getUsersWithGender = (users, gender) => users.filter(user => user.gender === gender)
+const getUsersWithGender = (users, gender) => users.filter(user => user.gender === gender).map(user => user.name)
 
 console.log(getUsersWithGender(users, 'male'));
 
@@ -48,7 +48,7 @@ console.log(calculateTotalBalance(users)); // 20916
 
 
 //Task-8 
-const getUsersWithFriend = (users, friendName) => users.filter(user => user.friends.includes(friendName)).map(user => user.friends);
+const getUsersWithFriend = (users, friendName) => users.filter(user => user.friends.includes(friendName)).map(user => user.name);
 
 console.log(getUsersWithFriend(users, 'Briana Decker'));
 console.log(getUsersWithFriend(users, 'Goldie Gentry'))
